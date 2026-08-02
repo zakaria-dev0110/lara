@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ $title }}</title> {{-- Created a named slot --}}
 
         @fonts
 
@@ -27,6 +27,9 @@
         <?php echo $slot; ?> 
         {{-- The dynamic part
         $slot is the default variable name --}}
-        
+
+        {{-- The two curly braces like "{{ $slot }}"
+        are translated to php echo statement --}}
+
     </body>
 </html>
