@@ -2,7 +2,7 @@
     <x-slot:title> {{-- Access the named slot --}}
         About
     </x-slot>
-    <?php foreach ($jobs  as $job): ?> 
+    @foreach($jobs as $job) 
         <li class="m-4"> {{ $job["Job"] }} job pays {{ $job['Salary'] }} $ per year.</li>
-    <?php endforeach; ?>
+    @endforeach
 </x-layout>
